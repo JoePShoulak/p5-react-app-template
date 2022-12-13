@@ -6,16 +6,18 @@ const sketch = (
     p5.createCanvas(600, 600);
   };
 
-  p5.updateWithProps = props => {
-    const sizeChanged =
-      props.width &&
-      props.height &&
-      (p5.width !== props.width || p5.height !== props.height);
+  let newWidth;
+  let newHeight;
 
-    if (sizeChanged) p5.resizeCanvas(props.width, props.height);
+  p5.updateWithProps = props => {
+    newWidth = props.width;
+    newHeight = props.height;
   };
 
   p5.draw = () => {
+    if (p5.width !== newWidth || p5.height !== newHeight)
+      p5.resizeCanvas(newWidth, newHeight);
+
     p5.background(20);
 
     p5.circle(p5.frameCount % p5.width, p5.height / 2, 10);
