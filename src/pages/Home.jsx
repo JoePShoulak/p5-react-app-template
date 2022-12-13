@@ -1,11 +1,12 @@
 import React from "react";
 import CssBaseline from "@mui/material/CssBaseline";
 import { Grid } from "@mui/material";
+import { ReactP5Wrapper as P5 } from "react-p5-wrapper";
 
 import AppBar from "../components/AppBar";
 import Hero from "../components/Hero";
-import Sketch from "../components/sketch/SketchComponent";
 import Tech from "../components/Technologies";
+import sketch from "../components/sketch/sketch";
 
 const Home = () => {
   const gridSettings = {
@@ -25,7 +26,7 @@ const Home = () => {
       <Hero />
       <Grid container {...gridSettings}>
         <Grid item>
-          <Sketch width={size} height={size} />
+          <P5 sketch={sketch} />
         </Grid>
         <Grid item style={gridItemStyle}>
           <Tech />
