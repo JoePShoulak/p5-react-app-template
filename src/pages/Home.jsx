@@ -16,8 +16,7 @@ const Home = () => {
     justifyContent: "center",
   };
 
-  const size = 600;
-  const gridItemStyle = { width: size, paddingTop: 10 };
+  const gridItemStyle = { width: 600, paddingTop: 10 };
 
   return (
     <>
