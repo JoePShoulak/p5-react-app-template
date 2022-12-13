@@ -1,7 +1,7 @@
 {
-  "name": "iss-tracker",
+  "name": "p5-react-app-template",
   "version": "0.1.0",
-  "homepage": "https://joepshoulak.github.io/iss-tracker",
+  "homepage": "https://joepshoulak.github.io/p5-react-app-template",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.5",
