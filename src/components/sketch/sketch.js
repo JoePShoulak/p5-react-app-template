@@ -17,7 +17,8 @@ const sketch = (
 
   p5.setup = () => {
     p5.createCanvas(400, 400);
-    p5.stroke(255);
+
+    console.log(window.innerWidth);
 
     stars = Array(starCount)
       .fill()
