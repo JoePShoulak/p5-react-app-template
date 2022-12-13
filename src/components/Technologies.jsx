@@ -29,11 +29,6 @@ const Technologies = () => (
     <CardContent>
       <List>
         <TechItem>
-          ISS location found using the
-          <TechLink name="WTIA" link="https://wheretheiss.at/w/developer" />
-          API
-        </TechItem>
-        <TechItem>
           Visual powered by
           <TechLink name="p5" link="https://p5js.org" />
         </TechItem>

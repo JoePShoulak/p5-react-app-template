@@ -13,15 +13,14 @@ const Hero = () => (
       align="center"
       color="text.primary"
       gutterBottom>
-      ISS Tracker
+      App Title
     </Typography>
     <Typography
       variant="h5"
       align="center"
       color="text.secondary"
       component="p">
-      See the International Space Station visualized over the earth (not to
-      scale).
+      An App that does a Thing that's worth checking out because it is!
     </Typography>
   </Container>
 );
