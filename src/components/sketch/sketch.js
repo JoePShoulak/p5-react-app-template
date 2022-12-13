@@ -1,24 +1,37 @@
+import Star from "./Star";
+
 const sketch = (
   /** @type {import("p5").p5InstanceExtensions} */
   p5
 ) => {
-  p5.setup = () => {
-    p5.createCanvas(600, 600);
-  };
+  let newWidth;
+  let newHeight;
 
   p5.updateWithProps = props => {
-    const sizeChanged =
-      props.width &&
-      props.height &&
-      (p5.width !== props.width || p5.height !== props.height);
+    newWidth = props.width;
+    newHeight = props.height;
+  };
 
-    if (sizeChanged) p5.resizeCanvas(props.width, props.height);
+  let stars = [];
+  const starCount = 800;
+
+  p5.setup = () => {
+    p5.createCanvas(400, 400);
+    p5.stroke(255);
+
+    stars = Array(starCount)
+      .fill()
+      .map(() => new Star(p5));
   };
 
   p5.draw = () => {
-    p5.background(20);
+    if (p5.width !== newWidth || p5.height !== newHeight)
+      p5.resizeCanvas(newWidth, newHeight);
 
-    p5.circle(p5.frameCount % p5.width, p5.height / 2, 10);
+    p5.background(0);
+
+    p5.translate(p5.width / 2, p5.height / 2);
+    stars.forEach(star => star.update());
   };
 };
 
